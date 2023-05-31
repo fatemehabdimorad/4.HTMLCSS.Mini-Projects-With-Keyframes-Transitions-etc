@@ -1,0 +1,135 @@
+:root {
+  --home-page-color: teal;
+  --page-1-color: coral;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: darkred;
+  --page-5-color: orange;
+  --page-6-color: steelblue;
+  --animate-speed: 1s;
+  --animate-speed3: 3s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4rem;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+ul {
+  text-align: justify;
+}
+a {
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  align-items: center;
+  margin: 10px;
+}
+/* Page Colors */
+#home-page {
+  background: var(--home-page-color);
+}
+#page-1 {
+  background: var(--page-1-color);
+}
+#page-2 {
+  background: var(--page-2-color);
+}
+#page-3 {
+  background: var(--page-3-color);
+}
+#page-4 {
+  background: var(--page-4-color);
+}
+#page-5 {
+  background: var(--page-5-color);
+}
+#page-6 {
+  background: var(--page-6-color);
+}
+.page {
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 1rem;
+}
+.page p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.page a i {
+  color: #fff;
+  opacity: 0.8;
+  margin: 0 0.5rem;
+}
+.btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 1s ease-in;
+  border: none;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+#home-page h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed3) ease-in forwards;
+}
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+#home-page p {
+  transform: translateY(2000px);
+  animation: heading var(--animate-speed3) ease-in forwards;
+}
+#home-page .btn-home {
+  transform: scale(0.01);
+  animation: appear var(--animate-speed) ease-in forwards;
+  animation-delay: 3s;
+}
+@keyframes appear {
+  from {
+    display: none;
+  }
+  to {
+    transform: scale(1);
+  }
+}
